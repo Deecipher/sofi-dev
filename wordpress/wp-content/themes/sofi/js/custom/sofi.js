@@ -33,4 +33,27 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+
+	/////////////////////////////
+	// Scroll to top button ////
+	///////////////////////////
+
+    jQuery(window).scroll(function() {
+
+      if(jQuery(window).scrollTop() >= 400) // 400 height
+      {
+        jQuery('#toTop').fadeIn(300);
+      }
+      else
+      {
+        jQuery('#toTop').fadeOut(300);
+      }
+
+    });
+
+    jQuery('body').on('click', '#toTop', function() {
+      jQuery('html, body').animate({ scrollTop: 0 }, 600);
+      
+    }); 
+
 });

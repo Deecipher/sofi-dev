@@ -28,7 +28,8 @@
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png"> -->
 
 		<!-- Google Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,900italic,400italic|Open+Sans:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,900italic,400italic|Open+Sans:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 		<!-- END Google Fonts -->
 		
 		<?php wp_head(); ?>

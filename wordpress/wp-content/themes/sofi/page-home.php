@@ -102,8 +102,12 @@ get_header(); ?>
 							$title = get_post_meta( get_the_ID(), '_speaker_title', true );
 					?>
 			
-					<div class="large-3 medium-6 small-12 columns speaker">
-						<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+					<div class="large-3 medium-6 small-12 columns speaker home-speaker">
+						<div class="speaker-thumb">
+							<div class="black-back">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+							</div>
+						</div>
 						<div class="name"><?php echo the_title(); ?></div>
 						<div class="org"><?php echo $title; ?></div>
 					</div>

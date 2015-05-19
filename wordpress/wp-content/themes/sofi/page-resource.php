@@ -26,7 +26,7 @@ get_header(); ?>
 				$categories = get_categories( $args );
 				$i = 0;
 				foreach($categories as $category) { 
-					if ($category->cat_name != 'Uncategorized') { ?>
+					if ($category->cat_name != 'Uncategorized' && $category->cat_name != 'Blog Categories' && $category->cat_name != 'Conference' && $category->cat_name != 'Live Blog' && $category->cat_name != 'Microfinance' && $category->cat_name != 'Turin') { ?>
 
 						<div class="resource-filter <?php if ( $i === 0 ) { echo 'active'; } ?>" cat="<?php echo $category->slug; ?>"><?php echo $category->name; ?></div>
 					

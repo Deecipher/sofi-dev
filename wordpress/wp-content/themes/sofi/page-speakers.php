@@ -40,7 +40,16 @@ get_header(); ?>
 		?>
 	<div class="speaker">
 		<div class="medium-3 columns">
-			<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+			<div class="speaker-thumb">
+				<div class="sm-links">
+					<?php if ($link) { echo '<a class="website" href="' . $link . '"><img src="' . get_stylesheet_directory_uri() . '/assets/img/icons/icon-web.png"></></a>'; } ?>
+					<?php if ($twitter) { echo '<a class="twitter" href="' . $twitter . '"><img src="' . get_stylesheet_directory_uri() . '/assets/img/icons/icon-twitter.png"></></a>'; } ?>
+					<?php if ($linkedin) { echo '<a class="linkedIn" href="' . $linkedin . '"><img src="' . get_stylesheet_directory_uri() . '/assets/img/icons/icon-linkedIn.png"></></a>'; } ?>
+				</div>
+				<div class="black-back">
+					<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+				</div>
+			</div>
 		</div>
 		<div class="medium-8 columns end">
 			<h2 class="name"><?php the_title(); ?></h2>

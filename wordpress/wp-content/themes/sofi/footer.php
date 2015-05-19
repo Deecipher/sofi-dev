@@ -13,6 +13,11 @@
 		</div>
 	</div>
 </footer>
+
+<div class="btn" id="toTop">
+	<span class="icon-up-open">&nbsp;</span>
+</div>
+
 <a class="exit-off-canvas"></a>
 
 	<?php do_action( 'foundationpress_layout_end' ); ?>
@@ -20,5 +25,13 @@
 </div>
 <?php wp_footer(); ?>
 <!-- <?php do_action( 'foundationpress_before_closing_body' ); ?> -->
+
+<script src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/js/classie.js"></script>
+<script src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/js/uisearch.js"></script>
+<script>
+	//new UISearch( document.getElementById( 'sb-search' ) );
+	new UISearch( document.getElementById( 'sb-search-li' ) );
+
+</script>
 </body>
 </html>
