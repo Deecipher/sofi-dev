@@ -33,7 +33,7 @@
 								<input type="submit" id="searchsubmit" value="" />
 							</form-->
 							<div id="sb-search" class="sb-search">
-								<form role="search" method="get" id="searchform" action="http://mastercardfdnsymposium.org/">
+								<form role="search" method="get" id="searchform" action="<?php get_site_url(); ?>">
 									<input class="sb-search-input" placeholder="Search" value="" name="s" type="text">
 									<input class="sb-search-submit" id="searchsubmit" value="" type="submit">
 									<span class="sb-icon-search"><img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/assets/img/icons/search.png" alt=""></span>
