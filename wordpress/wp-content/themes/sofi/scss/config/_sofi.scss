@@ -254,6 +254,49 @@ a {
     text-transform: none;
     border-left: 2px solid #FFF;
 }
+#sofi-main-nav {
+	ul.inline-list {
+		text-align: center;
+		li {
+			display: inline-block;
+			float: none;
+		}
+	}
+	.logo {
+		margin: 0;
+		max-width: 100%;
+	}
+}
+
+
+//////////////////////////////////////////
+// Mobile Menu //////////////////////////
+////////////////////////////////////////
+
+.left-off-canvas-menu {
+	background: $w;
+	.off-canvas-list {
+		li {
+			a {
+				color: $r;
+			}
+		}
+	}
+}
+
+.tab-bar {
+	margin: 0;
+	background-color: $w;
+	position: absolute;
+	z-index: 99;
+	.left-small {
+		height: 2.3rem;
+	}
+	.menu-icon {
+		height: 2.3rem;
+	}
+}
+
 
 //////////////////////////////////////////
 // Footer ///////////////////////////////
@@ -462,6 +505,10 @@ a {
 			width: 50%;
 			background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.48);
 		}
+	}
+
+	.mobile-hero {
+		margin-bottom: 1.5rem;
 	}
 
 	#connect {

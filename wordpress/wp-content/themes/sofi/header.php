@@ -42,14 +42,9 @@
 
 				<?php do_action( 'foundationpress_layout_start' ); ?>
 
-				<nav class="tab-bar show-for-small-only">
+				<nav class="tab-bar hide-for-large-only">
 					<section class="left-small">
 						<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-					</section>
-					<section class="middle tab-bar-section">
-
-						<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
-
 					</section>
 				</nav>
 

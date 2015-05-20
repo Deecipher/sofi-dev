@@ -23,8 +23,8 @@ if ( ! function_exists( 'foundationpress_top_bar_l' ) ) {
 	        'menu' => '',                                   // menu name
 	        'menu_class' => 'top-bar-menu left',            // adding custom nav class
 	        'theme_location' => 'top-bar-l',                // where it's located in the theme
-	        'before' => '',                                 // before each link <a>
-	        'after' => '',                                  // after each link </a>
+	        'before' => '<span class="show-for-large-up">',                                 // before each link <a>
+	        'after' => '</span>',                                  // after each link </a>
 	        'link_before' => '',                            // before each link text
 	        'link_after' => '',                             // after each link text
 	        'items_wrap' => '%3$s',							// ONLY OUTPUT THE LI's
@@ -46,8 +46,8 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 	        'menu' => '',                                   // menu name
 	        'menu_class' => 'top-bar-menu right',           // adding custom nav class
 	        'theme_location' => 'top-bar-r',                // where it's located in the theme
-	        'before' => '',                                 // before each link <a>
-	        'after' => '',                                  // after each link </a>
+	        'before' => '<span class="show-for-large-up">',                                 // before each link <a>
+	        'after' => '</span>',                                  // after each link </a>
 	        'link_before' => '',                            // before each link text
 	        'link_after' => '',                             // after each link text
 	        'items_wrap' => '%3$s',							// ONLY OUTPUT THE LI's

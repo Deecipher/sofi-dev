@@ -6,16 +6,42 @@ get_header(); ?>
 
 <div class="home">
 
-	<ul class="slider" data-orbit>
+	<div class="show-for-large-up">
+		<ul class="slider" data-orbit>
+				<?php
+				$slides = get_post_meta( get_the_ID(), $prefix . '_sofi_slider_slide', true );
+		
+				foreach ( (array) $slides as $key => $slide ) {
+		
+					$alt = $img = $caption = '';
+		
+					if ( isset( $slide['alt'] ) )
+						$alt = esc_html( $entry['alt'] );
+		
+					if ( isset( $slide['img'] ) )
+						$img = esc_html( $entry['img'] );
+		
+					if ( isset( $slide['caption'] ) )
+						$caption = esc_html( $entry['caption'] );
+		
+					?>
+					<li>
+						<img src="<?php echo $slide['img']; ?>" alt="<?php echo $slide['alt']; ?>" />
+						<div class="orbit-caption">
+							<?php echo $slide['caption']; ?>
+						</div>
+					</li>
+				<?php }	?>
+			</ul>
+		</div>
+	<div class="mobile-hero hide-for-large-up">
 		<?php
 		$slides = get_post_meta( get_the_ID(), $prefix . '_sofi_slider_slide', true );
 
+		$first = true;
 		foreach ( (array) $slides as $key => $slide ) {
 
-			$alt = $img = $caption = '';
-
-			if ( isset( $slide['alt'] ) )
-				$alt = esc_html( $entry['alt'] );
+			$img = $caption = '';
 
 			if ( isset( $slide['img'] ) )
 				$img = esc_html( $entry['img'] );
@@ -24,14 +50,15 @@ get_header(); ?>
 				$caption = esc_html( $entry['caption'] );
 
 			?>
-			<li>
-				<img src="<?php echo $slide['img']; ?>" alt="<?php echo $slide['alt']; ?>" />
-				<div class="orbit-caption">
-					<?php echo $slide['caption']; ?>
-				</div>
-			</li>
-		<?php }	?>
-	</ul>
+			<?php
+			
+			if ( $first ) {
+			?>
+				<img src="<?php echo $slide['img']; ?>" alt="<?php echo $slide['caption']; ?>" />
+				<?php  $first = false;
+			}
+		}	?>
+	</div>
 
 	<div id="connect" class="row">
 		<div class="medium-8 medium-offset-2 columns">

@@ -23,17 +23,23 @@ get_header(); ?>
 					'order' => 'DESC',
 					);
 
-				$categories = get_categories( $args );
-				$i = 0;
-				foreach($categories as $category) { 
-					if ($category->cat_name != 'Uncategorized' && $category->cat_name != 'Blog Categories' && $category->cat_name != 'Conference' && $category->cat_name != 'Live Blog' && $category->cat_name != 'Microfinance' && $category->cat_name != 'Turin') { ?>
+				// The Query
+				$resource_query = new WP_Query( $args );
 
-						<div class="resource-filter <?php if ( $i === 0 ) { echo 'active'; } ?>" cat="<?php echo $category->slug; ?>"><?php echo $category->name; ?></div>
-					
-					<?php 
-					$i++;
+				if ( $resource_query->have_posts() ) {
+					$c = 0;
+					while ( $resource_query->have_posts() ) {
+						$resource_query->the_post();
+						?>
+
+						<div class="resource-filter <?php if ( $c === 0 ) { echo 'active'; } ?>" cat="<?php $category = get_the_category(); echo $category[0]->slug; ?>">
+						<?php echo $category[0]->cat_name; ?></div>
+
+						<?php $c++;
 					}
 				}
+
+				wp_reset_postdata();
 				?>
 			</div>
 		</div>
