@@ -15,6 +15,7 @@ jQuery(document).ready(function($) {
 			$('.agenda-day-title[day=' + day +']').show().siblings('.agenda-day-title').hide();
 		}
 	});
+	
 
 	/////////////////////////////
 	// RESOURCES ///////////////
@@ -38,22 +39,22 @@ jQuery(document).ready(function($) {
 	// Scroll to top button ////
 	///////////////////////////
 
-    jQuery(window).scroll(function() {
+    $(window).scroll(function() {
 
-      if(jQuery(window).scrollTop() >= 400) // 400 height
+      if($(window).scrollTop() >= 400) // 400 height
       {
-        jQuery('#toTop').fadeIn(300);
+        $('#toTop').fadeIn(300);
       }
       else
       {
-        jQuery('#toTop').fadeOut(300);
+        $('#toTop').fadeOut(300);
       }
 
     });
 
-    jQuery('body').on('click', '#toTop', function() {
-      jQuery('html, body').animate({ scrollTop: 0 }, 600);
+    $('body').on('click', '#toTop', function() {
+      $('html, body').animate({ scrollTop: 0 }, 600);
       
-    }); 
+    });
 
 });

@@ -54,9 +54,9 @@
 			<article class="blog-article">
 				<header>
 					<h1><a href="./speakers"><?php the_title(); ?></a></h1>
-					<div class="time-auth">
+					<!-- <div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
-					</div>
+					</div> -->
 				</header>
 				<div class="content">
 					<p><?php if ($title) { echo $title; } ?></p>
@@ -79,9 +79,9 @@
 			<article class="blog-article">
 				<header>
 					<h1><a href="./resources"><?php the_title(); ?></a></h1>
-					<div class="time-auth">
+					<!-- <div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
-					</div>
+					</div> -->
 				</header>
 			</article>
 		<?php endwhile;
@@ -101,9 +101,9 @@
 			<article class="blog-article">
 				<header>
 					<h1><a href="./agenda"><?php the_title(); ?></a></h1>
-					<div class="time-auth">
+					<!-- <div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
-					</div>
+					</div> -->
 				</header>
 			</article>
 		<?php endwhile;
@@ -123,16 +123,15 @@
 			<article class="blog-article">
 				<header>
 					<h1><a href="./timeline"><?php the_title(); ?></a></h1>
-					<div class="time-auth">
+					<!-- <div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
-					</div>
+					</div> -->
 				</header>
 			</article>
 		<?php endwhile;
 		
 	endif; wp_reset_query();
 	?>
-
 
 	<?php do_action( 'foundationpress_before_pagination' ); ?>
 
