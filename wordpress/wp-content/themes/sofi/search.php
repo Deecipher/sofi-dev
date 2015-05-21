@@ -53,7 +53,7 @@
 		$title = get_post_meta( get_the_ID(), '_speaker_title', true ); ?>
 			<article class="blog-article">
 				<header>
-					<h1><a href="<?php get_site_url(); ?>/speakers"><?php the_title(); ?></a></h1>
+					<h1><a href="./speakers"><?php the_title(); ?></a></h1>
 					<div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
 					</div>
@@ -78,7 +78,7 @@
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<article class="blog-article">
 				<header>
-					<h1><a href="<?php get_site_url(); ?>/resources"><?php the_title(); ?></a></h1>
+					<h1><a href="./resources"><?php the_title(); ?></a></h1>
 					<div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
 					</div>
@@ -100,7 +100,7 @@
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<article class="blog-article">
 				<header>
-					<h1><a href="<?php get_site_url(); ?>/agenda"><?php the_title(); ?></a></h1>
+					<h1><a href="./agenda"><?php the_title(); ?></a></h1>
 					<div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
 					</div>
@@ -122,7 +122,7 @@
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<article class="blog-article">
 				<header>
-					<h1><a href="<?php get_site_url(); ?>/timeline"><?php the_title(); ?></a></h1>
+					<h1><a href="./timeline"><?php the_title(); ?></a></h1>
 					<div class="time-auth">
 						<?php the_time('F jS, Y') ?> by <?php the_author() ?>
 					</div>
