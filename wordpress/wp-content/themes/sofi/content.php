@@ -13,11 +13,8 @@
 		<div class="time-auth"><?php foundationpress_entry_meta(); ?></div>
 	</header>
 	<div class="content">
-		<!-- <?php the_content( __( 'Continue reading...', 'FoundationPress' ) ); ?> -->
-		<?php the_excerpt(); ?>
+		<?php the_content( '<b><i>Read More</i></b>' ); ?>
 	</div>
 	<footer>
-		<!-- <?php $tag = get_the_tags(); if ( ! $tag ) { } else { ?><p><?php the_tags(); ?></p><?php } ?> -->
-		<a href="<?php the_permalink(); ?>">Read More</a>
 	</footer>
 </article>

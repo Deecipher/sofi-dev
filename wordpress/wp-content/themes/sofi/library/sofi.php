@@ -23,6 +23,13 @@ return $text;
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'sofi_trim_excerpt');
 
+// Remove read more hash tag and preven scrolling when clicking on the read more link
+function remove_more_link_scroll( $link ) {
+  $link = preg_replace( '|#more-[0-9]+|', '', $link );
+  return $link;
+}
+add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
+
 // Remove content editor box on home page template
 add_action( 'admin_init', 'hide_editor_on_home_template' );
 

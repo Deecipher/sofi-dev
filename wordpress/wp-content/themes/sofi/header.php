@@ -3,7 +3,10 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title><?php if ( is_category() ) {
+	<title>
+	<?php if ( is_front_page() ) {
+		echo 'Home | '; wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
+	} elseif ( is_category() ) {
 		echo 'Category Archive for &quot;'; single_cat_title(); echo '&quot; | '; bloginfo( 'name' );
 	} elseif ( is_tag() ) {
 		echo 'Tag Archive for &quot;'; single_tag_title(); echo '&quot; | '; bloginfo( 'name' );
